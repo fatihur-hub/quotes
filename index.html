@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes of the Day</title>
+    <!-- Pastikan untuk menyertakan jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Menambahkan Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            height: 100vh;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-yellow-500 flex flex-col items-center justify-center min-h-screen text-center">
+    <div class="relative bg-white p-8 rounded-lg shadow-lg text-center max-w-lg mx-auto">
+        <h3 class="text-2xl font-bold mb-4">Quotes of the Day</h3>
+        <div class="absolute top-0 left-0 w-full h-full bg-yellow-500 opacity-20 rounded-lg"></div>
+        <blockquote id="quote-block" class="relative z-10 text-3xl font-bold text-black">
+            <p>LOADING...</p>
+        </blockquote>
+        <p id="quote-author" class="relative z-10 text-sm mt-4"></p>
+        <blockquote id="quote-translation" class="relative z-10 text-lg font-normal text-black mt-4">
+            <!-- Terjemahan akan ditampilkan di sini -->
+        </blockquote>
+        <div class="absolute top-0 left-0 w-full h-full bg-yellow-500 opacity-20 rounded-lg"></div>
+        <div class="absolute top-0 left-0 w-full h-full bg-yellow-500 opacity-20 rounded-lg"></div>
+    </div>
+    <div class="footer text-center mt-4">
+        <p>Made with ❤️ by <a target="_blank" href="https://instagram.com/fatihur.r">Fatih</a></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
