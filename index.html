@@ -8,16 +8,28 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Menambahkan Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Menambahkan Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <!-- Menambahkan html2canvas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body class="bg-gray-200 h-screen flex flex-col justify-center items-center">
-    <h1 class="text-4xl font-bold mb-4">Quotes of the Day </h1>
-    <div class="bg-gradient-to-r from-teal-400 to-blue-500 text-white p-8 rounded-lg shadow-lg max-w-md mx-4 md:mx-auto">
+    <h1 class="text-4xl font-bold mb-4">Quotes of the Day</h1>
+    <div class="relative bg-gradient-to-r from-teal-400 to-blue-500 text-white p-8 rounded-lg shadow-lg max-w-md mx-4 md:mx-auto">
         <div class="text-4xl leading-tight mb-4">“</div>
         <p id="quote-block" class="text-2xl font-bold mb-4">LOADING...</p>
         <div class="flex items-center mb-4">
             <div class="h-px bg-white flex-grow mr-2"></div>
             <p id="quote-author" class="text-lg"></p>
         </div>
+    </div>
+    <div class="flex justify-left mt-4 space-x-4 bg-white rounded-xl ">
+        <button id="download-btn" class=" p-2 rounded-full flex items-center justify-center">
+            <i class="fas fa-download text-gray-700 text-xl"></i>
+        </button>
+        <button id="share-btn" class="p-2 rounded-full flex items-center justify-center">
+            <i class="fab fa-whatsapp text-gray-700 text-xl"></i>
+        </button>
     </div>
     <div class="footer text-center mt-4">
         <p>Made with ❤️ by <a target="_blank" href="https://instagram.com/fatihur.r" class="text-teal-500">Fatih</a></p>

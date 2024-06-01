@@ -24,6 +24,32 @@ $(document).ready(function () {
         });
     }
 
+    // Fungsi untuk mengunduh card sebagai gambar
+    function downloadQuoteAsImage() {
+        html2canvas(document.querySelector("#quote-card")).then(canvas => {
+            var link = document.createElement('a');
+            link.download = 'quote.png';
+            link.href = canvas.toDataURL("image/png");
+            link.click();
+        });
+    }
+
+    // Fungsi untuk berbagi kutipan ke WhatsApp
+    function shareQuoteOnWhatsApp() {
+        var quote = $('#quote-block').text();
+        var author = $('#quote-author').text().slice(2); // Menghapus tanda '-' dari awal penulis
+
+        var message = encodeURIComponent('"' + quote + '" - ' + author);
+        var whatsappUrl = 'https://api.whatsapp.com/send?text=' + message;
+        window.open(whatsappUrl, '_blank');
+    }
+
     // Memuat kutipan ketika halaman dibuka
     fetchQuote();
+
+    // Menambahkan event listener untuk tombol download
+    $('#download-btn').on('click', downloadQuoteAsImage);
+
+    // Menambahkan event listener untuk tombol berbagi ke WhatsApp
+    $('#share-btn').on('click', shareQuoteOnWhatsApp);
 });
